@@ -22,13 +22,13 @@ class Graph
 	int V;
 	
 	// List of the vertices in the graph.
-	list<pair<int,int>> *adjacencyList;
+	list<pair<int,int> > *adjacencyList;
 	
 	// Constructor. Adds in all the vertices in the graph.
 	Graph(int V)
 	{
 		this->V = V;
-		adjacencyList = new list<pair<int,int>>[V];
+		adjacencyList = new list<pair<int,int> >[V];
 	}
 	
 	// Inserts in an edge between two vertices, and the associated cost to travel between them.
