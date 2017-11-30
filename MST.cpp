@@ -40,6 +40,12 @@ class Graph
 		adjacencyList[u].push_back(make_pair(v, w));	
 	}
 	
+	void print(vector<int> parent)
+	{
+		for(int i = 1; i < V; ++i)
+			cout << parent[i] << endl;
+	}
+	
 	// Trim the base graph to make into a MST using Prim's algorithm.
 	void trim()
 	{
@@ -99,8 +105,10 @@ class Graph
 		} // End while loop.
 		
 		// Print out the results.
-		for(int i = 1; i < V; ++i)
-			cout << parent[i] << endl;
+		//for(int i = 1; i < V; ++i)
+			//cout << parent[i] << endl;
+		
+		print(parent);
 		
 	} // End trim().
 };
