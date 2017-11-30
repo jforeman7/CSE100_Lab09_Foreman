@@ -67,5 +67,18 @@ int main()
 	// Take in the number of vertices and edges for the graph.
 	cin >> V >> E;
 	
+	// Create the graph.
+	Graph mst(V);
+	
+	// Vertex u, v, and weight w.
+	int u, v, w;
+	
+	// Add in the edges between the vertices.
+	for(int i = 0; i < E; i++)
+	{
+		cin >> u >> v >> w;
+		mst.insertEdge(u, v, w);
+	}
+	
 	return 0;	
 }
