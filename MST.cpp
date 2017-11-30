@@ -6,18 +6,30 @@
 
 using namespace std;
 
+// A vertice and its associated weight.
 class Vertice
 {
+	public:
+	
+	// ID number of the vertice.
 	int verticeID;
+	
+	// Weight of the vertice.
 	int weight;
 	
-	public:
+	// Constructor.
 	Vertice(int verticeID, int weight)
 	{
 		this->verticeID = verticeID;
 		this->weight = weight;
 	}
 };
+
+// Representation of a graph.
+class Graph
+{
+	int V;
+}
 
 int main()
 {
