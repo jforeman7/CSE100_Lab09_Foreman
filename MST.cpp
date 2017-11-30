@@ -3,24 +3,26 @@
 // Lab 09: MST
 
 #include <iostream>
+#include <list>
+#include <vector>
 
 using namespace std;
 
 // A vertice and its associated weight.
-class Vertice
+class Vertex
 {
 	public:
 	
-	// ID number of the vertice.
-	int verticeID;
+	// ID number of the vertex.
+	int vertexID;
 	
-	// Weight of the vertice.
+	// Weight of the vertex.
 	int weight;
 	
 	// Constructor.
-	Vertice(int verticeID, int weight)
+	Vertex(int vertexID, int weight)
 	{
-		this->verticeID = verticeID;
+		this->vertexID = vertexID;
 		this->weight = weight;
 	}
 };
@@ -28,7 +30,20 @@ class Vertice
 // Representation of a graph.
 class Graph
 {
+	public:
+	
+	// Number of vertices in the graph.
 	int V;
+	
+	// List of the vertices in the graph.
+	list<Vertex> *adjacencyList;
+	
+	// Constructor.
+	Graph(int V)
+	{
+		this->V = V;
+		adjacencyList = new list<Vertex>[V];
+	}
 };
 
 int main()
