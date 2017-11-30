@@ -29,7 +29,7 @@ class Vertice
 class Graph
 {
 	int V;
-}
+};
 
 int main()
 {
