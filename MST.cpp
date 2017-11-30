@@ -34,6 +34,7 @@ class Graph
 	// Inserts in an edge between two vertices, and the associated cost to travel between them.
 	void insertEdge(int u, int v, int w)
 	{
+		// Add vertex 'u' to the adjacency list of vertex 'v', and then vice versa for 'u'.
 		adjacencyList[v].push_back(make_pair(u, w));
 		adjacencyList[u].push_back(make_pair(v, w));	
 	}
