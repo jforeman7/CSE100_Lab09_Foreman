@@ -32,7 +32,7 @@ class Graph
 	{
 		this->V = V;
 		adjacencyList = new list<pair<int,int> >[V];
-		parent = new vector<int>(V, -1)
+		parent = new vector<int>(V, -1);
 	}
 	
 	// Inserts in an edge between two vertices, and the associated cost to travel between them.
