@@ -129,5 +129,8 @@ int main()
 		mst.insertEdge(u, v, w);
 	}
 	
+	// Perform Prim's algorithm and print out the MST.
+	mst.trim();
+	
 	return 0;	
 }
