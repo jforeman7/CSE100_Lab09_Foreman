@@ -38,11 +38,21 @@ class Graph
 	// List of the vertices in the graph.
 	list<Vertex> *adjacencyList;
 	
-	// Constructor.
+	// Constructor. Adds in all the vertices in the graph.
 	Graph(int V)
 	{
 		this->V = V;
 		adjacencyList = new list<Vertex>[V];
+	}
+	
+	// Inserts in an edge between two vertices, and the associated cost to travel between them.
+	void insertEdge(int u, int v, int w)
+	{
+		Vertex vertexU(u,w);
+		Vertex vertexV(v,w);
+		
+		adjacencyList[u].push_back(vertexV);
+		adjacencyList[v].push_back(vertexU);
 	}
 };
 
