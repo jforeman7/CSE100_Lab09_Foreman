@@ -6,6 +6,7 @@
 #include <list>
 #include <vector>
 #include <queue>
+#include <limits> // For infinity.
 
 using namespace std;
 
@@ -42,7 +43,14 @@ class Graph
 	// Trim the base graph to make into a MST using Prim's algorithm.
 	void trim()
 	{
+		// Root of the MST is vertex 0.
+		int root = 0;
+		
+		// Create a Priority Queue to do automatic sorting of the vertices.
 		priority_queue<Vertex, vector<Vertex>, greater<Vertex> > queue;
+		
+		// Keep track of the keys in a vector, and set a sentinel value of 9999, which will be greater than all possible values.
+		vector<int> key(V, numeric_limits<int>::max());
 	}
 };
 
