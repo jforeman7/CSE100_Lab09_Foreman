@@ -14,8 +14,8 @@ class Vertice
 	public:
 	Vertice(int verticeID, int weight)
 	{
-		this.verticeID = verticeID;
-		this.weight = weight;
+		this->verticeID = verticeID;
+		this->weight = weight;
 	}
 };
 
