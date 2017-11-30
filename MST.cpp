@@ -11,12 +11,13 @@
 using namespace std;
 
 // A vertice and its associated weight.
-// Uses typedef for compatiblity with Priority Queue.
+// Uses typedef pair for compatiblity with Priority Queue.
 typedef pair<int, int> Vertex;
 
 // Representation of a graph.
 class Graph
 {
+	// Make everyting public for ease of use.
 	public:
 	
 	// Number of vertices in the graph.
@@ -40,8 +41,10 @@ class Graph
 		adjacencyList[u].push_back(make_pair(v, w));	
 	}
 	
+	// A function for printing out the parent vector of the MST.
 	void print(vector<int> parent)
 	{
+		// Skip the root, it has no parent.
 		for(int i = 1; i < V; ++i)
 			cout << parent[i] << endl;
 	}
@@ -105,9 +108,6 @@ class Graph
 		} // End while loop.
 		
 		// Print out the results.
-		//for(int i = 1; i < V; ++i)
-			//cout << parent[i] << endl;
-		
 		print(parent);
 		
 	} // End trim().
