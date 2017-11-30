@@ -54,6 +54,12 @@ class Graph
 		adjacencyList[u].push_back(vertexV);
 		adjacencyList[v].push_back(vertexU);
 	}
+	
+	// Trim the base graph to make into a MST using Prim's algorithm.
+	void trim()
+	{
+		
+	}
 };
 
 int main()
