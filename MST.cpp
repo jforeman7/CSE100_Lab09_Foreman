@@ -77,14 +77,14 @@ class Graph
 			
 			// Do an STL for loop.
 			// Use pre-iterator to be able to get the end().
-			for(i = adjacencyList[u].begin(); i != adj[u].end(); ++i)
+			for(i = adjacencyList[u].begin(); i != adjacencyList[u].end(); ++i)
 			{
 				// Get the vertex-weight pair.
 				int v = (*i).first;
 				int w = (*i).second;
 				
 				// If the vertex is not in the MST, and is smaller, place in MST.
-				if(key[v] > weight && included[v] == false)
+				if(key[v] > w && included[v] == false)
 				{
 					// Assign the weight associated with the vertex.
 					key[v] = w;
