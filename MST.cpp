@@ -25,14 +25,11 @@ class Graph
 	// List of the vertices in the graph.
 	list<pair<int,int> > *adjacencyList;
 	
-	vector<int> *parent;
-	
 	// Constructor. Adds in all the vertices in the graph.
 	Graph(int V)
 	{
 		this->V = V;
 		adjacencyList = new list<pair<int,int> >[V];
-		parent = new vector<int>[V];
 	}
 	
 	// Inserts in an edge between two vertices, and the associated cost to travel between them.
@@ -57,7 +54,7 @@ class Graph
 		vector<int> key(V, numeric_limits<int>::max());
 		
 		// Keeps track of the parents, with a sentinel value of -1 in the beginning.
-		//vector<int> parent(V, -1);
+		vector<int> parent(V, -1);
 		
 		// Keeps track if a vertex is in the MST.
 		vector<bool> included(V, false);
