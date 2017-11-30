@@ -6,6 +6,19 @@
 
 using namespace std;
 
+class Vertice
+{
+	int verticeID;
+	int weight;
+	
+	public:
+	Vertice(int verticeID, int weight)
+	{
+		this.verticeID = verticeID;
+		this.weight = weight;
+	}
+};
+
 int main()
 {
 	// Number of vertices in the graph.
