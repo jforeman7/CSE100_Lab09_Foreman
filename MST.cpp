@@ -5,6 +5,7 @@
 #include <iostream>
 #include <list>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -58,7 +59,7 @@ class Graph
 	// Trim the base graph to make into a MST using Prim's algorithm.
 	void trim()
 	{
-		
+		priority_queue<Vertex, vector<Vertex>, greater<Vertex>> queue;
 	}
 };
 
